@@ -210,8 +210,10 @@ body {
   color: var(--brand-blue);
 }
 .header__navigation__element--active ::after {
+  pointer-events: none;
+
   position: absolute;
-  top: 41.5px;
+  top: 41.8px;
 
   display: block;
   content: "";
@@ -340,7 +342,7 @@ body {
 
 .main__hero-section__heading {
   font-size: 44px;
-  line-height: 1.5;
+  line-height: 1.4;
 
   margin: 200px 0 0 0;
 }
@@ -408,14 +410,27 @@ body {
 
   background-color: var(--background-white);
 }
+
 .main__what-we-do__heading {
   width: 100%; /* width so elements wrap under the heading */
 
   text-align: center;
   line-height: 1.5;
 }
+
 .main__what-we-do__figure {
   position: relative;
+}
+.main__what-we-do__figure__caption {
+  position: absolute;
+  bottom: 4px;
+  text-align: center;
+
+  width: 100%;
+
+  background: #2f303acc;
+
+  padding: 27px 0;
 }
 
 /* Our team */
@@ -445,12 +460,12 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 
-.main__our-team__caption {
+.main__our-team__figure__caption {
   line-height: 2;
   margin: 30px 0;
 }
 
-.main__our-team__caption__social-links {
+.main__our-team__figure__caption__social-links {
   display: flex;
 
   justify-content: center;
@@ -462,14 +477,14 @@ body {
   margin-top: 12px;
 }
 
-.main__our-team__caption__social-links svg {
+.main__our-team__figure__caption__social-links svg {
   color: var(--svg-inactive);
   padding: 12px;
   overflow: visible;
 }
 
-.main__our-team__caption__social-links a:hover svg,
-.main__our-team__caption__social-links a:focus svg {
+.main__our-team__figure__caption__social-links a:hover svg,
+.main__our-team__figure__caption__social-links a:focus svg {
   background-color: var(--brand-blue);
   color: var(--background-white);
   border-radius: 100%;
@@ -514,6 +529,65 @@ body {
 
   border: 1px solid var(--brand-blue);
 }
+
+/* MODAL(s) */
+/* Global */
+div.is-hidden {
+  display: none;
+}
+.modal__container {
+  transition: backround-color var(--transition-default);
+
+  position: fixed;
+  top: 0;
+
+  display: flex;
+
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #00000033;
+}
+
+/* Request a service */
+.modal__request-a-service {
+  width: 528px;
+  height: 581px;
+
+  background-color: var(--background-white);
+
+  margin-top: 221px;
+
+  padding: 8px;
+
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.modal__request-a-service__button {
+  float: right;
+  cursor: pointer;
+
+  width: 30px;
+  height: 30px;
+
+  background-color: var(--background-white);
+  font-size: 22px;
+  color: var(--text-black);
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+}
+.modal__request-a-service__button:hover {
+  background-color: var(--brand-blue);
+  color: var(--text-white);
+
+  border: none;
+}
+
 /* PORTFOLIO.HTML */
 /* Our Products */
 .main__our-products {
@@ -587,9 +661,48 @@ body {
 }
 
 .main__listings__element__figure {
-  max-width: 370px;
+  /* border: 1px solid #eee; Setting an inset border with box-shadow instead */
+  height: 100%;
 
+  -webkit-box-shadow: inset 0px 0px 0px 1px #eee;
+  -moz-box-shadow: inset 0px 0px 0px 1px #eee;
+  box-shadow: inset 0px 0px 0px 1px #eee;
+}
+
+.main__listings__element__figure__overlay-container {
+  position: relative;
+  overflow-y: clip;
+
+  text-align: center;
+
+  height: 295px;
+}
+
+.main__listings__element__figure__overlay-container img {
   border: 1px solid #eee;
+  border-bottom: none;
+}
+
+.main__listings__element__figure__overlay {
+  transition: top var(--transition-default);
+
+  position: absolute;
+  top: 100%;
+
+  width: 100%;
+  height: 100%;
+
+  background: #2196f3e6;
+}
+.main__listings__element__figure:hover
+  .main__listings__element__figure__overlay {
+  top: 0;
+  height: 100%;
+}
+
+.main__listings__element__figure__overlay p {
+  line-height: 1.6;
+  padding: 63px 24px 0 24px;
 }
 
 .main__listings__element__figure figcaption {

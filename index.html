@@ -74,6 +74,7 @@
           <li>
             <a
               href="mailto:info@devstudio.com"
+              target="_blank"
               class="contacts font__size--14 font__weight--500 font__color--secondary"
             >
               <svg width="16" height="13">
@@ -85,6 +86,7 @@
           <li>
             <a
               href="tel:+12127724150"
+              target="_blank"
               class="contacts font__size--14 font__weight--500 font__color--secondary"
             >
               <svg width="10" height="16" class="contacts__svgs">
@@ -108,6 +110,7 @@
             <button
               type="button"
               class="main__hero-section__button font__weight--700"
+              data-modal-open
             >
               Request our service
             </button>
@@ -197,6 +200,11 @@
               alt="Programming & Development"
               width="370"
             />
+            <figcaption
+              class="main__what-we-do__figure__caption font__color--white font__size--14 font__weight--700"
+            >
+              DESKTOP APPS
+            </figcaption>
           </figure>
           <figure class="main__what-we-do__figure">
             <img
@@ -204,9 +212,19 @@
               alt="Mobile Technologies"
               width="370"
             />
+            <figcaption
+              class="main__what-we-do__figure__caption font__color--white font__size--14 font__weight--700"
+            >
+              MOBILE APPS
+            </figcaption>
           </figure>
           <figure class="main__what-we-do__figure">
             <img src="./images/img-3.jpg" alt="Arts & Design" width="370" />
+            <figcaption
+              class="main__what-we-do__figure__caption font__color--white font__size--14 font__weight--700"
+            >
+              DESIGN SOLUTIONS
+            </figcaption>
           </figure>
         </article>
 
@@ -221,10 +239,10 @@
               alt="Christopher Walker - Product Designer"
               width="270"
             />
-            <figcaption class="main__our-team__caption">
+            <figcaption class="main__our-team__figure__caption">
               <strong>Christopher Walker</strong><br />
               <p class="font__color--secondary">Product Designer</p>
-              <div class="main__our-team__caption__social-links">
+              <div class="main__our-team__figure__caption__social-links">
                 <a
                   href="https://www.instagram.com/"
                   target="blank"
@@ -270,10 +288,10 @@
               alt="Kylie Evans - Frontend Developer"
               width="270"
             />
-            <figcaption class="main__our-team__caption">
+            <figcaption class="main__our-team__figure__caption">
               <strong>Kylie Evans</strong><br />
               <p class="font__color--secondary">Frontend Developer</p>
-              <div class="main__our-team__caption__social-links">
+              <div class="main__our-team__figure__caption__social-links">
                 <a
                   href="https://www.instagram.com/"
                   target="blank"
@@ -319,10 +337,10 @@
               alt="Ryan Harris - Marketing"
               width="270"
             />
-            <figcaption class="main__our-team__caption">
+            <figcaption class="main__our-team__figure__caption">
               <strong>Ryan Harris</strong><br />
               <p class="font__color--secondary">Marketing</p>
-              <div class="main__our-team__caption__social-links">
+              <div class="main__our-team__figure__caption__social-links">
                 <a
                   href="https://www.instagram.com/"
                   target="blank"
@@ -368,10 +386,10 @@
               alt="Tyler Moore - UI Designer"
               width="270"
             />
-            <figcaption class="main__our-team__caption">
+            <figcaption class="main__our-team__figure__caption">
               <strong>Tyler Moore</strong><br />
               <p class="font__color--secondary">UI Designer</p>
-              <div class="main__our-team__caption__social-links">
+              <div class="main__our-team__figure__caption__social-links">
                 <a
                   href="https://www.instagram.com/"
                   target="blank"
@@ -519,6 +537,20 @@
           </div>
         </div>
       </footer>
+
+      <!-- Modal & script -->
+      <div class="modal__container is-hidden" data-modal>
+        <div class="modal__request-a-service">
+          <button
+            class="modal__request-a-service__button"
+            type="button"
+            data-modal-close
+          >
+            &times;
+          </button>
+        </div>
+      </div>
+      <script src="./js/modal.js"></script>
     </div>
   </body>
 </html>
