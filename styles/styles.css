@@ -206,7 +206,8 @@ body {
 /* .header__navigation__element:hover .header__navigation__underline {
   display: block;
 }*/
-.header__navigation__element--active a {
+.header__navigation__element--active a,
+.header__navigation__element--active a:visited {
   color: var(--brand-blue);
 }
 .header__navigation__element--active ::after {
@@ -581,7 +582,8 @@ div.is-hidden {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 30px;
 }
-.modal__request-a-service__button:hover {
+.modal__request-a-service__button:hover,
+.modal__request-a-service__button:focus {
   background-color: var(--brand-blue);
   color: var(--text-white);
 
@@ -673,7 +675,8 @@ div.is-hidden {
   position: relative;
   overflow-y: clip;
 
-  text-align: center;
+  text-align: left;
+  letter-spacing: 0.03em;
 
   height: 295px;
 }
@@ -695,6 +698,8 @@ div.is-hidden {
   background: #2196f3e6;
 }
 .main__listings__element__figure:hover
+  .main__listings__element__figure__overlay,
+.main__listings__element__figure:focus
   .main__listings__element__figure__overlay {
   top: 0;
   height: 100%;
