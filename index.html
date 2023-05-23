@@ -112,6 +112,7 @@
               class="main__hero-section__button font__weight--700"
               data-modal-open
             >
+              <!-- TODO: use the new and improved dialog element -->
               Request our service
             </button>
           </div>
@@ -493,7 +494,7 @@
         </div>
         <div class="footer__wrapper-2">
           <h2
-            class="footer__header font__color--white font__size--14 font__weight--700"
+            class="footer__heading font__color--white font__size--14 font__weight--700"
           >
             FIND US ON
           </h2>
@@ -536,18 +537,162 @@
             </a>
           </div>
         </div>
+        <div class="footer__wrapper-3">
+          <form>
+            <label
+              class="footer__newsletter font__size--14 font__color--white font__weight--700"
+              for="footer-newsletter "
+            >
+              SUBSCRIBE TO THE NEWSLETTER
+              <input
+                class="footer__newsletter__input font__color--white"
+                id="footer-newsletter"
+                type="email"
+                placeholder="E-mail"
+              />
+            </label>
+          </form>
+          <button
+            class="footer__newsletter__submit font__color--white font__size--16"
+          >
+            Subscribe
+            <svg width="24" height="24">
+              <use href="./images/icons.svg#send-paperplane" />
+            </svg>
+          </button>
+        </div>
       </footer>
 
       <!-- Modal & script -->
-      <div class="modal__container is-hidden" data-modal>
-        <div class="modal__request-a-service">
-          <button
-            class="modal__request-a-service__button"
-            type="button"
-            data-modal-close
-          >
+      <!-- FIXME: ADD TRANSITIONS -->
+      <div class="modal-1 is-hidden" data-modal>
+        <div class="modal-1__container">
+          <button class="modal-1__close-button" type="button" data-modal-close>
             &times;
           </button>
+
+          <!-- Modal Form -->
+          <div class="modal-1__form-1-container">
+            <form class="modal-1__form-1">
+              <h2
+                class="modal-1__form-1__title font__weight--700 font__size--20"
+              >
+                Leave your information and we'll call you back
+              </h2>
+              <label
+                class="modal-1__form-1__label font__size--12 font__color--secondary"
+                for="form-1__name"
+              >
+                Name
+                <div class="modal-1__form-1__label__input-container">
+                  <input
+                    class="modal-1__form-1__label__input"
+                    id="form-1__name"
+                    type="text"
+                  />
+                  <svg
+                    class="modal-1__form-1__label__input__svg"
+                    height="18"
+                    width="18"
+                  >
+                    <use href="./images/icons.svg#form-person"></use>
+                  </svg>
+                </div>
+              </label>
+              <label
+                class="modal-1__form-1__label font__size--12 font__color--secondary"
+                for="form-1__telephone"
+              >
+                Telephone
+                <div class="modal-1__form-1__label__input-container">
+                  <input
+                    class="modal-1__form-1__label__input"
+                    id="form-1__telephone"
+                    type="tel"
+                    name="form-1__telephone-1"
+                  />
+                  <svg
+                    class="modal-1__form-1__label__input__svg"
+                    height="18"
+                    width="18"
+                  >
+                    <use href="./images/icons.svg#form-phone"></use>
+                  </svg>
+                </div>
+              </label>
+              <label
+                class="modal-1__form-1__label font__size--12 font__color--secondary"
+                for="form-1__email"
+              >
+                E-mail
+                <div class="modal-1__form-1__label__input-container">
+                  <input
+                    class="modal-1__form-1__label__input"
+                    id="form-1__email"
+                    type="email"
+                    name="form-1__email-1"
+                  />
+                  <svg
+                    class="modal-1__form-1__label__input__svg"
+                    height="18"
+                    width="18"
+                  >
+                    <use href="./images/icons.svg#form-email"></use>
+                  </svg>
+                </div>
+              </label>
+              <label
+                class="modal-1__form-1__label font__size--12 font__color--secondary"
+                for="form-1__comment"
+              >
+                Comments
+                <textarea
+                  class="modal-1__form-1__label__textarea font__size--12"
+                  id="form-1__comment"
+                  name="form-1__comment-1"
+                  placeholder="Enter the text"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </label>
+              <div
+                class="modal-1__form-1__checkbox-label font__size--14 font__color--secondary"
+              >
+                <label
+                  class="modal-1__form-1__checkbox-label"
+                  for="form-1__terms-and-conditions"
+                >
+                  <input
+                    class="modal-1__form-1__checkbox-label__checkbox"
+                    type="checkbox"
+                    id="form-1__terms-and-conditions"
+                    name="form-1__terms-and-conditions-1"
+                  />
+                  <svg
+                    class="modal-1__form-1__checkbox-label__checkbox__checkmark"
+                    height="14"
+                    width="14"
+                  >
+                    <use href="./images/icons.svg#checkmark"></use>
+                  </svg>
+                </label>
+                <span>
+                  I agree with the letter and accept the
+                  <a
+                    class="modal-1__form-1__checkbox-label__terms-and-conditions font__color--brand-blue"
+                    href="#terms-and-conditions"
+                    >Terms and Conditions</a
+                  >
+                </span>
+              </div>
+            </form>
+            <button
+              class="form-1__button font__color--white font__size--16 font__weight--700"
+              type="submit"
+            >
+              Send
+            </button>
+          </div>
         </div>
       </div>
       <script src="./js/modal.js"></script>
