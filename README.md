@@ -1,5 +1,5 @@
-﻿# goit-markup-hw-06
-https://zshax.github.io/goit-markup-hw-06/
----
+﻿# goit-markup-hw-07
 
-Did the fourth homework assignment
+## https://zshax.github.io/goit-markup-hw-06/
+
+Added SASS and fixed up BEM
